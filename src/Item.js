@@ -1,6 +1,5 @@
 export default class Item {
-    constructor(category, description, price) {
-        this.category = category;
+    constructor(description, price) {
         this.description = description;
         this.price = price;
     }

@@ -1,12 +1,14 @@
 import Item from "./Item";
 
 export default class TaxItem extends Item {
-    constructor(category, description, price, tax){
-        super(category, description, price)
-        this.tax = tax;
+    constructor(description, price){
+        super(description, price)
+        this.tax = 0;
     }
-    calculateTax(price, tax){
-        console.log(this.tax)
-        return price*tax;
+    calculateTax(tax){
+        return this.price*tax;
+    }
+    getTax(){
+        return this.price*this.tax;
     }
 }
