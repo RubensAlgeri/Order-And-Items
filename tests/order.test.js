@@ -22,7 +22,6 @@ test("Deve criar um pedido e calcular os impostos", () => {
   order.addItem(new Water("Crystal", 1));
   let taxes = 0;
   order.items.forEach((item) => {
-    console.log(item.taxValue)
     taxes += item.taxValue
   })
   expect(taxes).toBe(3903.7);
